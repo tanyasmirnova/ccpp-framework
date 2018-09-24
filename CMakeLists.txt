@@ -12,11 +12,11 @@ set(CMAKE_MACOSX_RPATH 1)
 
 if(POLICY CMP0048)
     cmake_policy(SET CMP0048 NEW)
-    project(ccpp VERSION 1.0.0)
+    project(ccpp VERSION 2.0.0)
 else(POLICY CMP0048)
     project(ccpp)
-    set(PROJECT_VERSION 1.0.0)
-    set(PROJECT_VERSION_MAJOR 1)
+    set(PROJECT_VERSION 2.0.0)
+    set(PROJECT_VERSION_MAJOR 2)
     set(PROJECT_VERSION_MINOR 0)
     set(PROJECT_VERSION_PATCH 0)
 endif(POLICY CMP0048)
@@ -86,8 +86,12 @@ if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "PGI")
 endif()
 
 #------------------------------------------------------------------------------
-# By default we want a shared library
-option(BUILD_SHARED_LIBS "Build a shared library" ON)
+# By default we want a shared library (unless a static build is requested)
+if(STATIC)
+  option(BUILD_SHARED_LIBS "Build a static library" OFF)
+else(STATIC)
+  option(BUILD_SHARED_LIBS "Build a shared library" ON)
+endif(STATIC)
 
 #------------------------------------------------------------------------------
 # Enable code coverage
