@@ -148,11 +148,11 @@ SCHEME_FILES = {
     'ccpp/physics/physics/rrtmg_sw_pre.F90'                  : [ 'slow_physics' ],
     'ccpp/physics/physics/sfc_diag.f'                        : [ 'slow_physics' ],
     'ccpp/physics/physics/sfc_diag_post.F90'                 : [ 'slow_physics' ],
+    'ccpp/physics/physics/sfc_drv_ruc.F90'                   : [ 'slow_physics' ],
     'ccpp/physics/physics/sfc_diff.f'                        : [ 'slow_physics' ],
     'ccpp/physics/physics/sfc_drv.f'                         : [ 'slow_physics' ],
     'ccpp/physics/physics/sfc_nst.f'                         : [ 'slow_physics' ],
     'ccpp/physics/physics/sfc_sice.f'                        : [ 'slow_physics' ],
-    'ccpp/physics/physics/sfc_drv_ruc.F90'                   : [ 'slow_physics' ],
     # stochastic physics
     'ccpp/physics/stochastic_physics/stochastic_physics.F90' : [ 'slow_physics' ],
     # memcheck utility
